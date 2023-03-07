@@ -1,0 +1,6 @@
+class: Clipping
+fields:
+  uid: Integer
+  data: String
+  source: String
+  date: String
