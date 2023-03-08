@@ -10,6 +10,7 @@ import 'package:serverpod_client/serverpod_client.dart' as _i1;
 
 class Clipping extends _i1.SerializableEntity {
   Clipping({
+    this.id,
     required this.uid,
     required this.data,
     required this.source,
@@ -21,6 +22,7 @@ class Clipping extends _i1.SerializableEntity {
     _i1.SerializationManager serializationManager,
   ) {
     return Clipping(
+      id: serializationManager.deserialize<int?>(jsonSerialization['id']),
       uid: serializationManager.deserialize<Integer>(jsonSerialization['uid']),
       data: serializationManager.deserialize<String>(jsonSerialization['data']),
       source:
@@ -28,6 +30,11 @@ class Clipping extends _i1.SerializableEntity {
       date: serializationManager.deserialize<String>(jsonSerialization['date']),
     );
   }
+
+  /// The database id, set if the object has been inserted into the
+  /// database or if it has been fetched from the database. Otherwise,
+  /// the id will be null.
+  int? id;
 
   Integer uid;
 
@@ -40,6 +47,7 @@ class Clipping extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> toJson() {
     return {
+      'id': id,
       'uid': uid,
       'data': data,
       'source': source,

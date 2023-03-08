@@ -80,6 +80,10 @@ class Protocol extends _i1.SerializationManagerServer {
         return table;
       }
     }
+    switch (t) {
+      case _i2.Clipping:
+        return _i2.Clipping.t;
+    }
     return null;
   }
 }

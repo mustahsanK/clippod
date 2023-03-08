@@ -1,4 +1,5 @@
 class: Clipping
+table: clipping
 fields:
   uid: Integer
   data: String
