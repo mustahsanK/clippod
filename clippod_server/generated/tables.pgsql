@@ -4,7 +4,7 @@
 
 CREATE TABLE "clipping" (
   "id" serial,
-  "uid" json NOT NULL,
+  "uid" integer NOT NULL,
   "data" text NOT NULL,
   "source" text NOT NULL,
   "date" text NOT NULL

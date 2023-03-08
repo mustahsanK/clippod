@@ -23,7 +23,7 @@ class Clipping extends _i1.TableRow {
   ) {
     return Clipping(
       id: serializationManager.deserialize<int?>(jsonSerialization['id']),
-      uid: serializationManager.deserialize<Integer>(jsonSerialization['uid']),
+      uid: serializationManager.deserialize<int>(jsonSerialization['uid']),
       data: serializationManager.deserialize<String>(jsonSerialization['data']),
       source:
           serializationManager.deserialize<String>(jsonSerialization['source']),
@@ -33,7 +33,7 @@ class Clipping extends _i1.TableRow {
 
   static final t = ClippingTable();
 
-  Integer uid;
+  int uid;
 
   String data;
 
@@ -221,7 +221,7 @@ class ClippingTable extends _i1.Table {
   /// the id will be null.
   final id = _i1.ColumnInt('id');
 
-  final uid = _i1.ColumnSerializable('uid');
+  final uid = _i1.ColumnInt('uid');
 
   final data = _i1.ColumnString('data');
 

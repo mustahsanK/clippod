@@ -23,7 +23,7 @@ class Clipping extends _i1.SerializableEntity {
   ) {
     return Clipping(
       id: serializationManager.deserialize<int?>(jsonSerialization['id']),
-      uid: serializationManager.deserialize<Integer>(jsonSerialization['uid']),
+      uid: serializationManager.deserialize<int>(jsonSerialization['uid']),
       data: serializationManager.deserialize<String>(jsonSerialization['data']),
       source:
           serializationManager.deserialize<String>(jsonSerialization['source']),
@@ -36,7 +36,7 @@ class Clipping extends _i1.SerializableEntity {
   /// the id will be null.
   int? id;
 
-  Integer uid;
+  int uid;
 
   String data;
 

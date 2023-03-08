@@ -1,7 +1,7 @@
 class: Clipping
 table: clipping
 fields:
-  uid: Integer
+  uid: int
   data: String
   source: String
   date: String
